@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+
+  bind9:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bind9-fork:9.16
+    restart: always
+    ports:
+      - 192.168.1.12:53:53/udp
+      - 192.168.1.12:53:53/tcp
+      - 127.0.0.1:953:953/tcp
+    volumes:
+      - ./zones:/etc/bind/zones/

@@ -1,0 +1,15 @@
+$TTL  604800
+@  IN  SOA  star-pact.lan. root.lan. (
+            4    ; Serial
+       604800    ; Refresh
+        86400    ; Retry
+      2419200    ; Expire
+       604800 )  ; Negative Cache TTL
+;
+
+@     IN      NS      star-pact.lan.
+
+12    IN      PTR     star-pact.lan.
+49    IN      PTR     einshtain.lan.
+148   IN      PTR     natalya.lan.
+183   IN      PTR     printer.lan.

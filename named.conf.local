@@ -1,0 +1,11 @@
+zone "lan" {
+  type master;
+  file "/etc/bind/zones/db.lan";        # zone file path
+  // allow-transfer { 10.128.20.12; };  # ns2 private IP address - secondary
+};
+
+zone "1.168.192.in-addr.arpa" {
+  type master;
+  file "/etc/bind/zones/db.1.168.192";  # 192.168.1.0/24 subnet
+  // allow-transfer { 10.128.20.12; };  # ns2 private IP address - secondary
+};
